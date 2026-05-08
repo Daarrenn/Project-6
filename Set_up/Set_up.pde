@@ -9,12 +9,19 @@ final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
 
+//location 
 float x = 450;
 float y = 450;
 float d = 100;
 
+//lives and score
+int score = 0;
+int lives = 3;
+
+float a = random(0, 2*PI);
 float vx = random(-5, 5);
 float vy = random(-5, 5);
+
 
 //set up
 void setup() {
