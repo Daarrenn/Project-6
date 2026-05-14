@@ -1,3 +1,7 @@
+
+
+
+
 //variables
 color introColour = #EADF76;
 
@@ -8,6 +12,8 @@ final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
+
+
 
 //location 
 float x = 450;
@@ -22,12 +28,17 @@ float a = random(0, 2*PI);
 float vx = random(-5, 5);
 float vy = random(-5, 5);
 
+//pause countdown
+float countdown = 0;
+float counting = 0;
 
 //set up
 void setup() {
   size(900, 900);
   mode = INTRO;
   textAlign(CENTER, CENTER);
+
+
 }
 
 void draw() {

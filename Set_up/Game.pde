@@ -1,6 +1,7 @@
 void game() {
   background(0, 255, 0);
   
+  textSize(30);
   text("Score: " + score, width/2, 50);
   text( "Lives: " + lives, width/2, 100);
   
@@ -40,7 +41,8 @@ void game() {
 void gameClicks() {
   if(dist(mouseX, mouseY, x, y) < 50) {
     score = score + 1;
-  } else if(dist(mouseX, mouseY, 50, 50) < 25){
+  } else if(dist(mouseX, mouseY, 50, 50) < 25) {
+  mode = PAUSE; 
   } else {
     lives = lives - 1;
   }
