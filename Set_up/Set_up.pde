@@ -1,6 +1,8 @@
 
 
-
+//images
+PImage cat;
+PImage dog;
 
 //variables
 color introColour = #EADF76;
@@ -18,13 +20,19 @@ final int GAMEOVER = 3;
 //location 
 float x = 450;
 float y = 450;
+
+//clicker size
 float d = 100;
+float sliderY = 400;
+float size;
 
 //lives and score
 int score = 0;
+int finalScore;
+int highScore = 0;
 int lives = 3;
 
-float a = random(0, 2*PI);
+
 float vx = random(-5, 5);
 float vy = random(-5, 5);
 
@@ -37,6 +45,9 @@ void setup() {
   size(900, 900);
   mode = INTRO;
   textAlign(CENTER, CENTER);
+  
+  cat = loadImage("cat.png");
+  dog = loadImage("dog.png");
 
 
 }

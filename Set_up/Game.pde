@@ -17,6 +17,11 @@ void game() {
   if(lives == 0) {
     mode = GAMEOVER;
   }
+  finalScore = score;
+  
+  if (score > highScore) {
+    highScore = score;
+  }
   
   
   
@@ -41,6 +46,8 @@ void game() {
 void gameClicks() {
   if(dist(mouseX, mouseY, x, y) < 50) {
     score = score + 1;
+    vx = vx * 1.1;
+    vy = vy * 1.1;
   } else if(dist(mouseX, mouseY, 50, 50) < 25) {
   mode = PAUSE; 
   } else {
