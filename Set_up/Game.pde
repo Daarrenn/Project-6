@@ -40,11 +40,17 @@ void game() {
   //target
   fill(0);
   circle(x, y, d);
+  if(CAT == true) {
+    image(cat, x, y, d, d);
+  }
+  if(DOG == true) {
+    image(dog, x, y, d, d);
+  }
   
 }
 
 void gameClicks() {
-  if(dist(mouseX, mouseY, x, y) < 50) {
+  if(dist(mouseX, mouseY, x, y) < d/2) {
     score = score + 1;
     vx = vx * 1.1;
     vy = vy * 1.1;

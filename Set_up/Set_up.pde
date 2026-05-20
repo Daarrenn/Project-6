@@ -4,6 +4,9 @@
 PImage cat;
 PImage dog;
 
+boolean CAT = false;
+boolean DOG = false;
+
 //variables
 color introColour = #EADF76;
 
@@ -14,6 +17,7 @@ final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
+final int OPTIONS = 4;
 
 
 
@@ -61,6 +65,8 @@ void draw() {
     pause();
   } else if (mode == GAMEOVER){
     gameover();
+  } else if (mode == OPTIONS){
+    options();
   } else {
     println("oh no" + mode);
   }
