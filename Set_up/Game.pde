@@ -1,7 +1,9 @@
 void game() {
-  background(0, 255, 0);
+  background(gameColour);
+  imageMode(CENTER);
   
   textSize(30);
+  stroke(0);
   text("Score: " + score, width/2, 50);
   text( "Lives: " + lives, width/2, 100);
   
@@ -30,15 +32,22 @@ void game() {
   y = y + vy;
   
   //bounce
-  if(x < 50 || x > width-d/2) {
+  if(x < 0-d || x > width-d/2) {
     vx = vx * -1;
   }
-  if(y < 50 || y > width-d/2) {
+  if(y < 0-d || y > width-d/2) {
     vy = vy * -1;
   }
   
   //target
-  fill(0);
+  if(ballColour == 1){
+    noFill();
+  } else if(ballColour == 2){
+    fill(255);
+  } else if(ballColour == 3){
+    fill(0);
+  }
+  stroke(0);
   circle(x, y, d);
   if(CAT == true) {
     image(cat, x, y, d, d);

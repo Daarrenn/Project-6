@@ -4,11 +4,13 @@
 PImage cat;
 PImage dog;
 
-boolean CAT = false;
+boolean CAT = true;
 boolean DOG = false;
 
 //variables
 color introColour = #EADF76;
+color gameColour = #CEF29D;
+color tactileColour =#F7F35F;
 
 
 
@@ -29,6 +31,9 @@ float y = 450;
 float d = 100;
 float sliderY = 400;
 float size;
+
+//clicker colour
+int ballColour = 1;
 
 //lives and score
 int score = 0;
@@ -69,5 +74,21 @@ void draw() {
     options();
   } else {
     println("oh no" + mode);
+  }
+}
+
+void squareTactile(int x, int x2, int y, int y2) {
+  if(mouseX > x && mouseX < x2 && mouseY > y && mouseY < y2) {
+    stroke(tactileColour);
+  } else {
+    stroke(0);
+  }
+}
+
+void circleTactile(int x, float y, int size) {
+  if (dist(x, y, mouseX, mouseY) < size) {
+    stroke(tactileColour);
+  } else {
+    stroke(0);
   }
 }
