@@ -1,4 +1,5 @@
 void pause() {
+  MUSIC.pause();
   textSize(60);
   text("PAUSED", width/2, height/3 - 30);
   textSize(30);
@@ -10,12 +11,14 @@ void pause() {
   if(countdown > 0 && countdown < 61) {
     text("3", width/2, height/2);
   } else if(countdown > 60 && countdown < 121) {
-    fill(0, 255, 0);
+    noStroke();
+    fill(gameColour);
     circle(width/2, height/2, 50);
     fill(0);
     text("2", width/2, height/2);
   } else if(countdown > 120 && countdown < 181) {
-    fill(0, 255, 0);
+    noStroke();
+    fill(gameColour);
     circle(width/2, height/2, 50);
     fill(0);
     text("1", width/2, height/2);

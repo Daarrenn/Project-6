@@ -1,4 +1,6 @@
 void gameover() {
+  MUSIC.rewind();
+  FAILURE.play();
   background(255, 0, 0);
   score = 0;
   fill(255);

@@ -1,3 +1,15 @@
+//minim stuff
+
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+Minim minim;
+AudioPlayer FAILURE, MUSIC, SUCCESS;
+
 
 
 //images
@@ -57,6 +69,12 @@ void setup() {
   
   cat = loadImage("cat.png");
   dog = loadImage("dog.png");
+  
+  //minim stuff cont.
+  minim = new Minim(this);
+  FAILURE = minim.loadFile("FAILURE.wav");
+  MUSIC = minim.loadFile("MUSIC.mp3");
+  SUCCESS = minim.loadFile("SUCCESS.wav");
 
 
 }

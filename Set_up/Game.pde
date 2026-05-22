@@ -1,4 +1,5 @@
 void game() {
+  MUSIC.play();
   background(gameColour);
   imageMode(CENTER);
   
@@ -63,9 +64,13 @@ void gameClicks() {
     score = score + 1;
     vx = vx * 1.1;
     vy = vy * 1.1;
+    SUCCESS.rewind();
+    SUCCESS.play();
   } else if(dist(mouseX, mouseY, 50, 50) < 25) {
   mode = PAUSE; 
   } else {
     lives = lives - 1;
+    FAILURE.rewind();
+    FAILURE.play();
   }
 }
